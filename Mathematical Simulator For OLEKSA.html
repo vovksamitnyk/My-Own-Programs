@@ -125,7 +125,8 @@
             }
 
             let changeImportantWord = function(value, id) {
-                if ((value % 10 === 2 || value % 10 === 3 || value % 10 === 4) && value % 100 !== 12 && value % 100 !== 13 && value % 100 !== 14) {
+                if ((value % 10 === 2 || value % 10 === 3 || value % 10 === 4) && 
+                    value % 100 !== 12 && value % 100 !== 13 && value % 100 !== 14) {
                     let newImportantWord = document.getElementById(id);
                     newImportantWord.innerHTML = " РАЗИ";
                 } else if (value % 10 === 1 && value % 100 !== 11) {
@@ -154,24 +155,23 @@
                     console.log(z);
 
                 } else if (choiceOfMathematicalAction === 1) {
+                    x = Math.floor(Math.random() * 100);
+                    y = Math.floor(Math.random() * x);
+                    sum = prompt("Скільки буде " + x + " - " + y + " = ?");
+                    z = x - y;
+
+                } else if (choiceOfMathematicalAction === 2) {
                     x = Math.floor(Math.random() * 10 + 1);
                     y = Math.floor(Math.random() * 10);
                     sum = prompt("Скільки буде " + x + " * " + y + " = ?");
                     z = x * y;
                     console.log(z);
-                    
-                } else if (choiceOfMathematicalAction === 2) {
+
+                } else {
                     x = Math.floor(Math.random() * 10 + 1);
                     y = Math.floor(Math.random() * 10);
                     sum = prompt("Скільки буде " + x * y + " : " + x + " = ?");
                     z = x * y / x;
-                    console.log(z);
-                    
-                } else {
-                    x = Math.floor(Math.random() * 100);
-                    y = Math.floor(Math.random() * x);
-                    sum = prompt("Скільки буде " + x + " - " + y + " = ?");
-                    z = x - y;
                     console.log(z);
                 }
                 summaryAnswersValue++;
@@ -199,7 +199,7 @@
                     changeImportantWord(wrongAnswerValue, "important-word-W");
                 }
             };
-            
+
         </script>
     </body>
 </html>
