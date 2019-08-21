@@ -1,27 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
     <head>
-        <title>Тренажер математичний для Олекси</title>
-    </head>
-    <body>
-        <h1> </h1>
-        <div id="replica">(натисни кнопку "ПРИКЛАД")</div>
-
-        <div class="button-bottom">
-            <button class="button" onclick="mathematicalSimulatorForOLEKSA()">ПРИКЛАД</button>
-        </div>
-        <div class="results">
-            <div>
-                <h3>ВІДПОВІВ: <span id="summary">0</span><span id="important-word-S"> РАЗІВ</span></h3></div>
-            <div>
-                <h3>З НИХ ПРАВИЛЬНО: <span id="right">0</span><span id="important-word-R"> РАЗІВ</span></h3>
-            </div>
-            <div>
-                <h3>ПОМИЛИВСЯ: <span id="wrong">0</span><span id="important-word-W"> РАЗІВ</span></h3></div>
-        </div>
-
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.js"></script>
-
+        <meta charset="utf-8">
+        <script src="../jquery-2.1.0.js"></script>
         <style>
             body {
                 font-family: courier;
@@ -72,6 +53,31 @@
                 color: red;
             }
         </style>
+        <title>Тренажер математичний для Олекси</title>
+    </head>
+
+
+    <body>
+       
+        <h1>...</h1>
+        
+        <div id="replica">(натисни кнопку "ПРИКЛАД")</div>
+
+        <div class="button-bottom">
+            <button class="button" onclick="mathematicalSimulatorForOLEKSA()">ПРИКЛАД</button>
+        </div>
+        
+        <div class="results">
+            <div>
+                <h3>ВІДПОВІВ: <span id="summary">0</span><span id="important-word-S"> РАЗІВ</span></h3>
+            </div>
+            <div>
+                <h3>З НИХ ПРАВИЛЬНО: <span id="right">0</span><span id="important-word-R"> РАЗІВ</span></h3>
+            </div>
+            <div>
+                <h3>ПОМИЛИВСЯ: <span id="wrong">0</span><span id="important-word-W"> РАЗІВ</span></h3>
+            </div>
+        </div>
 
         <script>
             let motivationStrings = [
@@ -200,7 +206,6 @@
                     changeImportantWord(wrongAnswerValue, "important-word-W");
                 }
             };
-
         </script>
     </body>
 </html>
