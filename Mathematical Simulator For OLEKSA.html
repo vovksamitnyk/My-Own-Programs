@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Тренажер математичний для Олекси</title>
     </head>
@@ -178,7 +178,8 @@
                 changeCurrentValue(summaryAnswersValue, "summary");                
                 changeImportantWord(summaryAnswersValue, "important-word-S");
 
-                if (sum == z) {
+                z += '';
+                if (sum === z) {
                     let replica = document.getElementById('replica');
                     let randomMotivationStrings = Math.floor(Math.random() * motivationStrings.length);
                     replica.innerHTML = motivationStrings[randomMotivationStrings];
