@@ -188,10 +188,13 @@
                 z += '';
                 if (sum === z) {
                     let replica = document.getElementById('replica');
+                    let rightAnswer = document.getElementById('rightAnswer');
+                    rightAnswer.innerHTML = "";
                     let randomMotivationStrings = Math.floor(Math.random() * motivationStrings.length);
                     replica.innerHTML = motivationStrings[randomMotivationStrings];
                     replica.style.color = "blue";
                     replica.style.background = "yellow";
+                    rightAnswer.style.background = "yellow";
                     rightAnswerValue++;
                     changeCurrentValue(rightAnswerValue, "right");
                     changeImportantWord(rightAnswerValue, "important-word-R");
