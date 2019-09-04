@@ -58,16 +58,16 @@
 
 
     <body>
-       
+
         <h1>...</h1>
-        
+
         <div id="replica">(натисни кнопку "ПРИКЛАД")</div>
         <div id=rightAnswer>...</div>
 
         <div class="button-bottom">
             <button class="button" onclick="mathematicalSimulatorForOLEKSA()">ПРИКЛАД</button>
         </div>
-        
+
         <div class="results">
             <div>
                 <h3>ВІДПОВІВ: <span id="summary">0</span><span id="important-word-S"> РАЗІВ</span></h3>
@@ -100,6 +100,7 @@
                 "Молодчинка!",
                 "Молодчинка! Правильно!..",
                 "Справжній математик!"
+                "Добре!"
             ];
             let punishmentStrings = [
                 "Дуже зле! Будь уважнішим!",
@@ -166,6 +167,7 @@
                     y = Math.floor(Math.random() * x);
                     sum = prompt("Скільки буде " + x + " - " + y + " = ?");
                     z = x - y;
+                    console.log(z);
 
                 } else if (choiceOfMathematicalAction === 2) {
                     x = Math.floor(Math.random() * 10 + 1);
@@ -186,6 +188,7 @@
                 changeImportantWord(summaryAnswersValue, "important-word-S");
 
                 z += '';
+
                 if (sum === z) {
                     let replica = document.getElementById('replica');
                     let rightAnswer = document.getElementById('rightAnswer');
@@ -203,23 +206,23 @@
                     let replica = document.getElementById('replica');
                     let rightAnswer = document.getElementById('rightAnswer');
                     let randomPunishmentStrings = Math.floor(Math.random() * punishmentStrings.length);
-                 
+
                     if (choiceOfMathematicalAction === 0) {
-                    replica.innerHTML = punishmentStrings[randomPunishmentStrings];
-                    rightAnswer.innerHTML = "(Ти відповів: " + sum + ". Правильна відповідь: " + x + " + " + y + " = " + (x + y) + ").";
+                        replica.innerHTML = punishmentStrings[randomPunishmentStrings];
+                        rightAnswer.innerHTML = "(Ти відповів: " + sum + ". Правильна відповідь: " + x + " + " + y + " = " + (x + y) + ").";
 
-                } else if (choiceOfMathematicalAction === 1) {
-                    replica.innerHTML = punishmentStrings[randomPunishmentStrings];
-                    rightAnswer.innerHTML = "(Ти відповів: " + sum + ". Правильна відповідь: " + x + " - " + y + " = " + (x - y) + ").";
+                    } else if (choiceOfMathematicalAction === 1) {
+                        replica.innerHTML = punishmentStrings[randomPunishmentStrings];
+                        rightAnswer.innerHTML = "(Ти відповів: " + sum + ". Правильна відповідь: " + x + " - " + y + " = " + (x - y) + ").";
 
-                } else if (choiceOfMathematicalAction === 2) {
-                    replica.innerHTML = punishmentStrings[randomPunishmentStrings];
-                    rightAnswer.innerHTML = "(Ти відповів: " + sum + ". Правильна відповідь: " + x + " * " + y + " = " + (x * y) + ").";
+                    } else if (choiceOfMathematicalAction === 2) {
+                        replica.innerHTML = punishmentStrings[randomPunishmentStrings];
+                        rightAnswer.innerHTML = "(Ти відповів: " + sum + ". Правильна відповідь: " + x + " * " + y + " = " + (x * y) + ").";
 
-                } else {
-                    replica.innerHTML = punishmentStrings[randomPunishmentStrings];
-                    rightAnswer.innerHTML = "(Ти відповів: " + sum + ". Правильна відповідь: " + x * y + " : " + x + " = " + y + ").";
-                }
+                    } else {
+                        replica.innerHTML = punishmentStrings[randomPunishmentStrings];
+                        rightAnswer.innerHTML = "(Ти відповів: " + sum + ". Правильна відповідь: " + x * y + " : " + x + " = " + y + ").";
+                    }
                     replica.style.color = "#f00";
                     rightAnswer.style.color = "brown";
                     replica.style.background = "pink";
